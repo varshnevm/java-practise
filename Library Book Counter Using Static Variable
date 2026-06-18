@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class LibrarySystem {
+
+    private static int totalBooks = 0;
+    private String title;
+
+    public LibrarySystem(String title) {
+        this.title = title;
+        totalBooks++;
+        displayCount();
+    }
+
+    private void displayCount() {
+        System.out.println("Book Added");
+        System.out.println("Total Books: " + totalBooks);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of books to add: ");
+        int booksToAdd = scanner.nextInt();
+        scanner.nextLine();
+
+        for (int i = 0; i < booksToAdd; i++) {
+            new LibrarySystem("Book " + (i + 1));
+        }
+
+        scanner.close();
+    }
+}
