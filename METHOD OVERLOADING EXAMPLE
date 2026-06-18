@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ShoppingSystem {
+
+    public static void purchase(String productName) {
+        System.out.println("Product: " + productName);
+        System.out.println();
+    }
+
+    public static void purchase(String productName, int quantity) {
+        System.out.println("Product: " + productName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println();
+    }
+
+    public static void purchase(String productName, int quantity, String discountCode) {
+        System.out.println("Product: " + productName);
+        System.out.println("Quantity: " + quantity);
+        System.out.println("Discount Code: " + discountCode);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        purchase("Laptop");
+        purchase("Laptop", 2);
+        purchase("Laptop", 2, "SAVE10");
+    }
+}
